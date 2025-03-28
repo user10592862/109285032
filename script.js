@@ -799,3 +799,22 @@ detailsButtons.forEach(button => {
         document.body.style.overflow = 'hidden';
     });
 });
+
+// Prevent horizontal scroll
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.overflowX = 'hidden';
+    
+    // Alternatively, find what's causing overflow
+    function checkOverflow() {
+        const docWidth = document.documentElement.offsetWidth;
+        const bodyWidth = document.body.offsetWidth;
+        
+        if (bodyWidth > docWidth) {
+            console.warn('Horizontal overflow detected!');
+            // You can add more debugging here
+        }
+    }
+    
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+});
