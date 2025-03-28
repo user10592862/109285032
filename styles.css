@@ -1067,47 +1067,150 @@ section {
     transform: translateY(0);
 }
 
-/* More Details Button Styles */
+/* Cyberpunk Button 2.0 */
 .details-btn {
-    background: transparent;
-    color: var(--secondary);
-    border: 1px solid var(--primary);
-    padding: 8px 16px;
-    border-radius: 20px;
-    margin-top: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
     position: relative;
+    background: rgba(5, 5, 16, 0.7); /* Dark background with transparency */
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 10px 24px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
     z-index: 1;
+    border-radius: 0;
+    box-shadow: 0 0 0 0 rgba(0, 240, 255, 0);
+    text-shadow: 0 0 0 rgba(0, 240, 255, 0);
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - 10px) 0%,
+        100% 10px,
+        100% 100%,
+        10px 100%,
+        0% calc(100% - 10px)
+    );
 }
 
+/* Hover State - Activated Cybernetic Effect */
 .details-btn:hover {
-    background: rgba(0, 240, 255, 0.1);
+    background: rgba(0, 240, 255, 0.05);
+    color: var(--light);
+    text-shadow: 0 0 10px var(--primary);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3),
+                inset 0 0 15px rgba(0, 240, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 240, 255, 0.2);
 }
 
+/* Active State - When Popup is Open */
+.details-btn.active {
+    background: rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 25px var(--primary),
+                inset 0 0 20px rgba(0, 240, 255, 0.3);
+    color: var(--light);
+}
+
+/* Animated Border Effect */
 .details-btn::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-                transparent, 
-                rgba(0, 240, 255, 0.2), 
-                transparent);
-    transition: all 0.5s ease;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+        135deg,
+        var(--primary) 0%,
+        var(--secondary) 50%,
+        var(--primary) 100%
+    ) 1;
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - 10px) 0%,
+        100% 10px,
+        100% 100%,
+        10px 100%,
+        0% calc(100% - 10px)
+    );
     z-index: -1;
+    animation: border-pulse 4s linear infinite;
 }
 
-.details-btn:hover::before {
-    left: 100%;
+/* Plus Icon Animation */
+.details-btn::after {
+    content: '+';
+    margin-left: 10px;
+    display: inline-block;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.details-btn:hover::after {
+    transform: rotate(90deg) scale(1.2);
+    color: var(--secondary);
+}
+
+/* Cybernetic Scan Line Effect */
+.details-btn .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--primary),
+        transparent
+    );
+    animation: scan 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.details-btn:hover .scan-line {
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes border-pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes scan {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .details-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+        clip-path: polygon(
+            0% 0%,
+            calc(100% - 8px) 0%,
+            100% 8px,
+            100% 100%,
+            8px 100%,
+            0% calc(100% - 8px)
+        );
+    }
 }
 
 /* Timeline Popup - Clean Tech Style */
@@ -3426,48 +3529,3 @@ section {
         margin: 0 auto;
     }
 }
-
-/* Prevent zooming on mobile */
-html, body {
-    touch-action: manipulation;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-  }
-  
-  /* Disable pinch zoom */
-  @viewport {
-    width: device-width;
-    zoom: 1.0;
-    min-zoom: 1.0;
-    max-zoom: 1.0;
-    user-zoom: fixed;
-  }
-  
-  /* For older browsers */
-  @-ms-viewport {
-    width: device-width;
-  }
-
-  @media (max-width: 768px) {
-    html {
-      overflow-x: hidden;
-      position: fixed;
-      width: 100%;
-    }
-    
-    body {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    
-    /* Force fixed scaling on your tech box */
-    .tech-box {
-      transform: translateY(-50%) scale(1) !important;
-      zoom: 1 !important;
-    }
-  }
