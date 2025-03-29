@@ -3561,29 +3561,28 @@ section {
 
 /* MOBILE STYLES - CONSISTENT BLUE LINES */
 @media (max-width: 768px) {
-    /* Targets ALL category titles (Startups, Collaborations, Projects, Certifications) */
+    /* First, ensure the parent container isn't clipping the pseudo-element */
+    .achievement-category {
+        overflow: visible !important;
+    }
+
+    /* Target the category title */
+    .achievement-category h3[class^="category-title"] {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Create the full-width line */
     .achievement-category h3[class^="category-title"]::after {
-      content: '' !important;
-      position: absolute !important;
-      left: 0 !important;
-      bottom: -8px !important;
-      width: 100% !important;
-      height: 2px !important;
-      background: linear-gradient(0deg, var(--primary), transparent) !important;
-      border: none !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      opacity: 1 !important;
+        content: '' !important;
+        position: absolute !important;
+        left: 50% !important;
+        bottom: -8px !important;
+        transform: translateX(-50%) !important;
+        width: 100vw !important;
+        height: 2px !important;
+        background: linear-gradient(0deg, var(--primary), transparent) !important;
+        opacity: 1 !important;
+        z-index: 1 !important; /* Ensure it appears above other elements */
     }
-  
-    /* Ensure text replacements have same styling */
-    .achievement-category h3[class^="category-title"]::before {
-      display: block !important;
-      font-size: 1.8rem !important;
-      margin: 0 auto 0px !important;
-      font-weight: bold !important;
-      color: var(--light) !important;
-      width: 100% !important;
-      text-align: center !important;
-    }
-  }
+}
