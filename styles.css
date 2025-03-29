@@ -3586,3 +3586,37 @@ section {
         z-index: 1 !important; /* Ensure it appears above other elements */
     }
 }
+
+@media (max-width: 768px) {
+    /* Standardize spacing below the line for all category titles */
+    .achievement-category h3[class^="category-title"] {
+        padding-bottom: 24px !important; /* Adjust this value as needed */
+        margin-bottom: 0 !important; /* Remove any default margins */
+    }
+
+    /* Position the line absolutely within this padding */
+    .achievement-category h3[class^="category-title"]::after {
+        bottom: 12px !important; /* Half of padding-bottom to center in space */
+    }
+
+    /* Ensure consistent spacing for the content below titles */
+    .achievement-category > div {
+        padding-top: 8px !important; /* Space between line and content */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Projects-specific adjustments (category-title3) */
+    .achievement-category h3.category-title3 {
+        padding-bottom: 18px !important; /* Reduced space below title */
+    }
+    
+    .achievement-category h3.category-title3::after {
+        bottom: 6px !important; /* Raise the line position */
+    }
+
+    /* Optional: Adjust content spacing below Projects section */
+    .achievement-category h3.category-title3 + div {
+        padding-top: 0px !important;
+    }
+}
