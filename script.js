@@ -818,3 +818,33 @@ document.addEventListener('DOMContentLoaded', function() {
     checkOverflow();
     window.addEventListener('resize', checkOverflow);
 });
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile About Text Switcher
+    function updateAboutText() {
+        const aboutParagraph = document.querySelector('.about-text p');
+        if (!aboutParagraph) return;
+        
+        // Store the original text if we haven't already
+        if (!aboutParagraph.dataset.originalText) {
+            aboutParagraph.dataset.originalText = aboutParagraph.textContent;
+        }
+        
+        const mobileText = "Tech-savvy entrepreneur with startup experience bridging academia and real-world business solutions.";
+        const desktopText = aboutParagraph.dataset.originalText;
+        
+        // Check screen width and update text accordingly
+        aboutParagraph.textContent = window.innerWidth <= 768 ? mobileText : desktopText;
+    }
+
+    // Run immediately
+    updateAboutText();
+    
+    // Run whenever window is resized (with debounce)
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateAboutText, 200);
+    });
+});
