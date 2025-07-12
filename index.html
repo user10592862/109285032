@@ -50,28 +50,33 @@
     </div>
 </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>As a driven student with a strong foundation in both technology and business, I blend technical proficiency with entrepreneurial insight. I have successfully founded multiple startups while constantly applying my academic knowledge to solve real-world challenges. My journey is defined by a passion for innovation and a commitment to bridging the gap between theoretical learning and practical business solutions.</p>
-                    <div class="stats">
-                        <div class="stat-box" data-count="12">0</div>
-                        <div class="stat-box" data-count="7">0</div>
-                        <div class="stat-box" data-count="19">0</div>
-                    </div>
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <!-- Desktop version (hidden on mobile) -->
+                <p class="desktop-about-text">As a driven student with a strong foundation in both technology and business, I blend technical proficiency with entrepreneurial insight. I have successfully founded multiple startups while constantly applying my academic knowledge to solve real-world challenges. My journey is defined by a passion for innovation and a commitment to bridging the gap between theoretical learning and practical business solutions.</p>
+                
+                <!-- Mobile version (hidden on desktop) -->
+                <p class="mobile-about-text">My name is Jason Fang and I’m a current senior at San Leandro High School. I'm passionate about technology and business with the potential of blending innovation with real-world impact. From founding startups to applying classroom knowledge in practical ways, I strive to turn ideas into solutions.</p>
+                
+                <div class="stats">
+                    <div class="stat-box" data-count="12">0</div>
+                    <div class="stat-box" data-count="7">0</div>
+                    <div class="stat-box" data-count="19">0</div>
                 </div>
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="images/TechtualityJason.png" alt="Jason Fang">
-                        <div class="image-border"></div>
-                    </div>
+            </div>
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="images/JasonFang.png" alt="Jason Fang">
+                    <div class="image-border"></div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Achievements Section -->
     <section class="achievements" id="achievements">
@@ -84,13 +89,15 @@
                 <div class="enterprise-grid">
                     <div class="enterprise-card">
                         <div class="enterprise-logo">
-                            <div class="logo-placeholder">TN</div>
+                            <div class="logo-placeholder">TG</div>
                         </div>
                         <div class="enterprise-info">
-                            <h4>True Nature Restoration Foundation</h4>
-                            <div class="position">Founder & Executive Director</div>
-                            <div class="date">May 2024 - Present</div>
-                            <p class="description">Led a 501(c)(3) nonprofit organization that's focused on environmental restoration and conservation with over 35+ restoration events including habitat restoration and tree planting while maintaing a dedicated network of 125+ volunteers and partnerships with 15+ schools.</p>
+                            <h4>Techtuality Global</h4>
+                            <div class="position">Founder & Chief Executive Officer</div>
+                            <div class="date">Dec 2022 - Present</div>
+                            <p class="description">Techtuality Global is a technology company with over 20,000 members worldwide, empowering innovation through AI and automation. We host large-scale events like Code For Change (500+ participants) and partner with mentors from Google, Meta, and Amazon to guide global talent.
+
+</p>
                         </div>
                     </div>
                     <div class="enterprise-card">
@@ -100,20 +107,20 @@
                         <div class="enterprise-info">
                             <h4>Subject Verse</h4>
                             <div class="position">Founder & Head of AI Development</div>
-                            <div class="date">Aug 2023 - Present</div>
-                            <p class="description">Developed AI-driven interactive learning tools that process 1,000+ responses daily to deliver real-time personalized feedback across 15+ subjects while enhancing the learning experience for 750+ students by adapting to their individual progress and needs.</p>
+                            <div class="date">Oct 2023 - Present</div>
+                            <p class="description">Subject Verse is a digital education platform supporting 750+ learners through interactive study guides, 120+ quizzes, and 300+ mastery resources across AP and core subjects. We promote academic success with progress tracking, adaptive tools, and curriculum-aligned content built for students.</p></p>
                         </div>
                     </div>
                     <div class="enterprise-card">
                         <div class="enterprise-logo">
-                            <div class="logo-placeholder">TA</div>
+                            <div class="logo-placeholder">TN</div>
                         </div>
                         <div class="enterprise-info">
-                            <h4>Techtuality Global</h4>
-                            <div class="position">Founder & Chief Executive Officer</div>
-                            <div class="date">Dec 2022 - Present</div>
-                            <p class="description">Implemented innovative automation systems that optimized operational efficiency for 100+ organizations, while overseeing mission-critical server operations with a remarkable 99.9% uptime, ensuring seamless performance and scalability for all users and clients.
-                            </p>
+                            <h4><span class="desktop-org-name">True Nature Restoration Foundation</span>
+                            <span class="mobile-org-name">True Nature Environmental Restoration Foundation</span></h4>
+                            <div class="position">Founder & Executive Director</div>
+                            <div class="date">May 2024 - Present</div>
+                            <p class="description">TNERF is a 501(c)(3) nonprofit leading environmental action with 120+ volunteers and programs across 15+ Bay Area schools. We’ve tracked 1,000+ hours of restoration work using our in-house Green Metrics Scope and revitalized key sites like Washington Manor Park and Bridgeview Trailhead.</p>
                         </div>
                     </div>
                 </div>
@@ -303,7 +310,7 @@
                 <div class="timeline-item">
                     <div class="timeline-date">2024</div>
                     <div class="timeline-content">
-                        <h3>Founded TNERF</h3>
+                        <h3>Established TNERF</h3>
                         <p>Pioneered environmental restoration campaigns with over 35 large-scale initiatives and over 125 volunteers and 15 partner schools.</p>
                         <button class="details-btn" data-year="2024">
                             <span>More Details</span>
@@ -315,8 +322,8 @@
                 <div class="timeline-item">
                     <div class="timeline-date">2023</div>
                     <div class="timeline-content">
-                        <h3>Founded Subject Verse</h3>
-                        <p>Created a comprehensive EdTech platform offering interactive learning tools, adaptive assessments, and progress tracking for students.</p>
+                        <h3>Launched Subject Verse</h3>
+                        <p>Created a comprehensive Educational Technology platform offering interactive learning tools, adaptive assessments, and progress tracking for students.</p>
                         <button class="details-btn" data-year="2023">
                             <span>More Details</span>
                             <i>+</i>
