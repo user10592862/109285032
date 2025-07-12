@@ -4080,9 +4080,9 @@ section {
     .about .section-title::after {
         content: '' !important;
         position: absolute !important;
-        left: -50px !important;
+        left: -400px !important;
         bottom: 0 !important;
-        width: 200% !important;
+        width: 500% !important;
         height: 1px !important;
         background: var(--primary) !important;
         z-index: 1 !important;
