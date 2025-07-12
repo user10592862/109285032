@@ -4191,3 +4191,10 @@ section {
         left: 0 !important;
     }
 }
+
+/* Hide stats on mobile */
+@media (max-width: 768px) {
+    .about .stats {
+        display: none !important;
+    }
+}
