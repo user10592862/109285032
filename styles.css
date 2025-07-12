@@ -4078,15 +4078,16 @@ section {
 
     /* SOLID BLUE LINE - CENTERED */
     .about .section-title::after {
-        content: '' !important;
-        position: absolute !important;
-        left: -400px !important;
-        bottom: 0 !important;
-        width: 500% !important;
-        height: 1px !important;
-        background: var(--primary) !important;
-        z-index: 1 !important;
-    }
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important; /* Center the line */
+    bottom: 0 !important;
+    width: 100vw !important; /* Full viewport width */
+    height: 1px !important;
+    background: var(--primary) !important;
+    z-index: 1 !important;
+    transform: translateX(-50%) !important; /* True centering */
+}
 
     /* SQUARE PROFILE PICTURE - LARGER SIZE */
 .image-wrapper {
