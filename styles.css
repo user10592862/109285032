@@ -3620,3 +3620,547 @@ section {
         padding-top: 0px !important;
     }
 }
+
+/* Mobile-specific styles for About section */
+@media (max-width: 768px) {
+    /* About section styling */
+    .about {
+        display: block !important;
+        padding: 50px 20px !important;
+    }
+
+    /* Make sure the about-image container is visible */
+    .about-image {
+        display: block !important;
+        order: 1; /* Image first on mobile */
+        margin-bottom: 25px;
+    }
+
+    /* Image wrapper styling */
+    .image-wrapper {
+        display: block !important;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--primary);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        position: relative;
+    }
+
+    /* Profile image styling */
+    .image-wrapper img {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(0%) contrast(110%);
+    }
+
+    /* Hide the decorative border on mobile */
+    .image-border {
+        display: none;
+    }
+
+    /* Section title styling */
+    .about .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    /* Blue underline */
+    .about .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary), transparent);
+    }
+
+    /* About grid layout */
+    .about-grid {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* About text styling */
+    .about-text {
+        text-align: center;
+        padding: 0 10px;
+        order: 2; /* Text comes after image */
+    }
+
+    /* Stats container */
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Make the section more compact */
+    .about-text p {
+        margin-bottom: 20px;
+    }
+}
+
+/* Smaller mobile adjustments */
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 15px !important;
+    }
+
+    .image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* MOBILE STYLES - COMPLETE ABOUT SECTION */
+@media (max-width: 768px) {
+    /* About section container */
+    .about {
+        display: block !important;
+        padding: 50px 20px !important;
+        position: relative;
+        overflow: visible !important;
+    }
+
+    /* Section title - remove blue from "Me" */
+    .about .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+    
+    .about .section-title span {
+        color: var(--light) !important;
+        position: static !important;
+    }
+    
+    .about .section-title span::after {
+        content: none !important;
+    }
+
+    /* Full-width blue line (matches other sections) */
+    .about .section-title::after {
+        content: '' !important;
+        position: absolute !important;
+        left: 50% !important;
+        bottom: 0 !important;
+        transform: translateX(-50%) !important;
+        width: 200vw !important;
+        height: 2px !important;
+        background: linear-gradient(90deg, var(--primary), transparent) !important;
+        z-index: 1 !important;
+    }
+
+    /* About grid layout */
+    .about-grid {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Profile image container - ensure visible */
+    .about-image {
+        display: block !important;
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    /* Circular profile picture */
+    .image-wrapper {
+        width: 240px !important;
+        height: 240px !important;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid var(--primary);
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    }
+
+    .image-wrapper img {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(0%) contrast(110%);
+    }
+
+    /* About text content */
+    .about-text {
+        text-align: center;
+        padding: 0 10px;
+        order: 2;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    /* Stats container */
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .stat-box {
+        background: rgba(0, 240, 255, 0.1);
+        border: 1px solid var(--primary);
+        padding: 15px;
+        min-width: 80px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    }
+
+    /* Hide decorative border on mobile */
+    .image-border {
+        display: none;
+    }
+}
+
+/* Smaller devices */
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 15px !important;
+    }
+
+    .about .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .stat-box {
+        font-size: 1.5rem;
+        min-width: 70px;
+        padding: 12px;
+    }
+}
+
+/* MOBILE STYLES - ABOUT SECTION (FULLY ASSERTIVE) */
+@media (max-width: 768px) {
+    /* SECTION CONTAINER */
+    .about {
+        display: block !important;
+        padding: 50px 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    /* INNER CONTAINER */
+    .about .container {
+        padding: 0 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* SECTION TITLE */
+    .about .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 40px !important;
+        text-align: center !important;
+        position: relative !important;
+        padding-bottom: 15px !important;
+        width: 100vw !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        color: var(--light) !important;
+    }
+    
+    /* REMOVE BLUE FROM "ME" */
+    .about .section-title span {
+        color: var(--light) !important;
+        position: static !important;
+        background: transparent !important;
+    }
+    
+    .about .section-title span::after {
+        display: none !important;
+        content: none !important;
+    }
+    
+    /* FULL-WIDTH BLUE LINE */
+    .about .section-title::after {
+        content: '' !important;
+        position: absolute !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 2px !important;
+        background: var(--primary) !important;
+        z-index: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* ABOUT GRID LAYOUT */
+    .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 0 !important;
+    }
+    
+    /* PROFILE IMAGE CONTAINER */
+    .about-image {
+        display: block !important;
+        order: 1 !important;
+        margin-bottom: 30px !important;
+        width: 100% !important;
+        text-align: center !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* CIRCULAR PROFILE PICTURE */
+    .image-wrapper {
+        width: 240px !important;
+        height: 240px !important;
+        margin: 0 auto !important;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        border: 3px solid var(--primary) !important;
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.3) !important;
+        position: relative !important;
+        display: block !important;
+    }
+    
+    .image-wrapper img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        filter: grayscale(0%) contrast(110%) !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    
+    /* HIDE DECORATIVE BORDER */
+    .image-border {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* ABOUT TEXT CONTENT */
+    .about-text {
+        text-align: center !important;
+        padding: 0 10px !important;
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .about-text p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 20px !important;
+        color: var(--light) !important;
+    }
+    
+    /* STATS CONTAINER */
+    .stats {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        margin-top: 25px !important;
+        width: 100% !important;
+    }
+    
+    .stat-box {
+        background: rgba(0, 240, 255, 0.1) !important;
+        border: 1px solid var(--primary) !important;
+        padding: 15px !important;
+        min-width: 80px !important;
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        color: var(--primary) !important;
+        border-radius: 5px !important;
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.2) !important;
+        text-align: center !important;
+    }
+}
+
+/* SMALLER DEVICES */
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 0 !important;
+    }
+    
+    .about .container {
+        padding: 0 15px !important;
+    }
+    
+    .about .section-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .image-wrapper {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem !important;
+    }
+    
+    .stat-box {
+        font-size: 1.5rem !important;
+        min-width: 70px !important;
+        padding: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* TITLE CONTAINER - PROPER CENTERING */
+    .about .section-title {
+        font-size: 2rem !important;
+        margin: 0 auto 40px !important;
+        text-align: center !important;
+        position: relative !important;
+        padding-bottom: 15px !important;
+        width: fit-content !important;
+        max-width: 100% !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        display: block !important;
+    }
+
+    /* SOLID BLUE LINE - CENTERED */
+    .about .section-title::after {
+        content: '' !important;
+        position: absolute !important;
+        left: -50px !important;
+        bottom: 0 !important;
+        width: 200% !important;
+        height: 1px !important;
+        background: var(--primary) !important;
+        z-index: 1 !important;
+    }
+
+    /* SQUARE PROFILE PICTURE - LARGER SIZE */
+.image-wrapper {
+    width: 280px !important;  /* Increased from 240px */
+    height: 280px !important; /* Increased from 240px */
+    margin: 0 auto !important;
+    border-radius: 8px !important; /* Changed from 50% to make square with slight rounding */
+    overflow: hidden !important;
+    border: 1.5px solid var(--primary) !important;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3) !important;
+    position: relative !important;
+    display: block !important;
+    left: -7px !important;
+    margin-top: -10px !important
+}
+
+.image-wrapper img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: grayscale(0%) contrast(110%) !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+}
+
+/* Hide mobile text by default */
+.mobile-about-text {
+    display: none;
+}
+
+/* On mobile screens */
+@media (max-width: 768px) {
+    .desktop-about-text {
+        display: none;
+    }
+    .mobile-about-text {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Make description box wider on mobile */
+    .about-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 5px !important; /* Optional: adjust side padding */
+    }
+    
+    /* Make the paragraph text take full width */
+    .about-text p {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    /* If you have a container limiting width, override it */
+    .about .container {
+        max-width: 100% !important;
+        padding: 0 15px !important; /* Adjust as needed */
+    }
+}
+
+/* Hide mobile version by default */
+.mobile-org-name {
+    display: none;
+}
+
+/* Switch on mobile */
+@media (max-width: 768px) {
+    .desktop-org-name {
+        display: none;
+    }
+    .mobile-org-name {
+        display: inline;
+    }
+}
