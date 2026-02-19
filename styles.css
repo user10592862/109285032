@@ -3494,7 +3494,7 @@ section {
     }
 
     /* Text replacement for each category */
-    .achievement-category h3.category-title1::before { content: "Startups"; }
+    .achievement-category h3.category-title1::before { content: "Projects"; }
     .achievement-category h3.category-title2::before { content: "Collaborations"; }
     .achievement-category h3.category-title3::before { content: "Projects"; }
     .achievement-category h3.category-title4::before { content: "Certifications"; }
